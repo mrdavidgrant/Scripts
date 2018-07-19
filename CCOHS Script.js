@@ -10,7 +10,7 @@
       insertNew(health);
     } else {
       if (ccohs.u_completed != '') {
-        ccohs.u_status = 'Complete'
+        ccohs.u_status = 'Complete';
       }
       ccohs.u_role = 'Health and Safety';
       ccohs.u_location = health.u_employee.location;

@@ -32,7 +32,7 @@
       insertNew(health);
     } else {
       if (ccohs.u_completed != '') {
-        ccohs.u_status = 'Complete'
+        ccohs.u_status = 'Complete';
       }
       ccohs.u_role = 'Health and Safety';
       ccohs.u_location = health.u_employee.location;
@@ -55,15 +55,15 @@
   var gr = new GlideAggregate ('sys_user');
   gr.addQuery('active', 'true');
   gr.addQuery('manager', '!=', '');
-  gr.addQuery('manager', '!=', '6ec4f19edbbc5f00cf1dfcfaae961998')
-  gr.addQuery('location', '!=', '')
+  gr.addQuery('manager', '!=', '6ec4f19edbbc5f00cf1dfcfaae961998');
+  gr.addQuery('location', '!=', '');
   gr.addAggregate('count');
   gr.orderByAggregate('count');
   gr.groupBy('manager');
   gr.query();
   while (gr.next()){
     var ccohs = new GlideRecord ('u_facilities_ccohs');
-    ccohs.addQuery('u_employee', gr.manager)
+    ccohs.addQuery('u_employee', gr.manager);
     ccohs.query();
     if (ccohs.next()){
       var status = ccohs.u_status;

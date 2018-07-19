@@ -3,7 +3,7 @@
     var request = new GlideRecord ('facilities_request');
     request.initialize();
     request.location = location;
-    request.template = 'f201dcf3db1a0300a89978a6ae96193f'
+    request.template = 'f201dcf3db1a0300a89978a6ae96193f';
     request.short_description = short_description;
     request.description = description;
     request.state = 10;
